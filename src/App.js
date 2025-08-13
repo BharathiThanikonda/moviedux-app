@@ -5,7 +5,7 @@ import Footer from './components/footer';
 import MoviesGrid from './components/MoviesGrid';
 import WatchList from './components/Watchist';
 import Dashboard from './components/Dashboard';
-import { BrowserRouter  as Router, Routes,Route,Link} from 'react-router-dom';
+import { HashRouter as Router, Routes,Route,Link} from 'react-router-dom';
 import {useEffect,useState} from "react";
 
 
