@@ -1,6 +1,10 @@
 
 # MovieDux
 
+[![Deploy to GitHub Pages](https://github.com/BharathiThanikonda/moviedux-app/actions/workflows/deploy.yml/badge.svg)](https://github.com/BharathiThanikonda/moviedux-app/actions/workflows/deploy.yml)
+
+Live demo: https://bharathithanikonda.github.io/moviedux-app/#/
+
 MovieDux is a modern React app for browsing movies, managing a personal watchlist, and exploring movie details. Users can add or remove movies from their watchlist, sort and filter selections, and view detailed information in a clean, responsive interface.
 
 ## Features
@@ -14,7 +18,7 @@ MovieDux is a modern React app for browsing movies, managing a personal watchlis
 
 1. **Clone the repository:**
 	```sh
-	git clone https://github.com/your-username/moviedux.git
+	git clone https://github.com/BharathiThanikonda/moviedux-app.git
 	cd moviedux
 	```
 2. **Install dependencies:**
@@ -26,6 +30,17 @@ MovieDux is a modern React app for browsing movies, managing a personal watchlis
 	npm start
 	```
 4. Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
+
+## Deployment
+
+- This project auto-deploys to GitHub Pages on each push to `main` using GitHub Actions.
+- Workflow: `.github/workflows/deploy.yml`
+- Live URL: https://bharathithanikonda.github.io/moviedux-app/#/
+
+Manual deploy (optional):
+```sh
+npm run deploy
+```
 
 ## Folder Structure
 - `src/` - React components and styles
