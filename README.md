@@ -1,7 +1,6 @@
 
 # MovieDux
 
-[![Deploy to GitHub Pages](https://github.com/BharathiThanikonda/moviedux-app/actions/workflows/deploy.yml/badge.svg)](https://github.com/BharathiThanikonda/moviedux-app/actions/workflows/deploy.yml)
 
 Live demo: https://bharathithanikonda.github.io/moviedux-app/#/
 
