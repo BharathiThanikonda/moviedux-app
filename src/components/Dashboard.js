@@ -68,7 +68,7 @@ export default function Dashboard({ movies, watchlist }) {
                         .slice(0, 3)
                         .map(movie => (
                             <div key={movie.id} className="recommendation-item">
-                                <img src={`images/${movie.image}`} alt={movie.title} />
+                                <img src={`${process.env.PUBLIC_URL}/images/${movie.image}`} alt={movie.title} />
                                 <div>
                                     <h4>{movie.title}</h4>
                                     <p>Rating: {movie.rating}</p>

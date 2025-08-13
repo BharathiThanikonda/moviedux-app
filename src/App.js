@@ -28,7 +28,7 @@ function App() {
   }, [watchlist]);
   
   useEffect(() => {
-    fetch("movies.json")
+    fetch(`${process.env.PUBLIC_URL}/movies.json`)
       .then((response) => response.json())
       .then((data) => setMovies(data));
   }, []);

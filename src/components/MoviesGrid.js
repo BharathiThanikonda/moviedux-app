@@ -144,7 +144,7 @@ export default function MoviesGrid({movies, watchlist, toggleWatchlist}){
                         <button className="modal-close" onClick={closeModal}>×</button>
                         <div className="modal-body">
                             <img 
-                                src={`images/${selectedMovie.image}`} 
+                                src={`${process.env.PUBLIC_URL}/images/${selectedMovie.image}`} 
                                 alt={selectedMovie.title}
                                 className="modal-image"
                             />

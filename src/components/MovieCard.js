@@ -3,7 +3,7 @@ import '../styles.css';
 
 export default function MovieCard({ movie ,isWatchlisted,toggleWatchlist}) {
     const handleError = (e) => {
-        e.target.src = 'images/default.jpg'; // Fallback image
+        e.target.src = `${process.env.PUBLIC_URL}/images/default.jpg`; // Fallback image
     };
     const getRatingClass = (rating) => {
         if (rating >= 8) return 'rating-good';
@@ -13,7 +13,7 @@ export default function MovieCard({ movie ,isWatchlisted,toggleWatchlist}) {
     return (
         <div>
             <div className="movie-card" key={movie.id}>
-                <img src={`images/${movie.image}`} alt={movie.title} onError={handleError} />
+                <img src={`${process.env.PUBLIC_URL}/images/${movie.image}`} alt={movie.title} onError={handleError} />
                 <div className="movie-card-info">
                             <h3 className = 'movie-card-title'>{movie.title}</h3>
                             <div>
