@@ -13,7 +13,6 @@ import {useEffect,useState} from "react";
 function App() {
   const [movies,setMovies] = useState([]);
   const [watchlist,setWatchlist] = useState([]);
-  const [darkMode, setDarkMode] = useState(false);
   
   // Load watchlist from localStorage on app start
   useEffect(() => {
@@ -21,23 +20,12 @@ function App() {
     if (savedWatchlist) {
       setWatchlist(JSON.parse(savedWatchlist));
     }
-    
-    const savedTheme = localStorage.getItem('moviedux-theme');
-    if (savedTheme) {
-      setDarkMode(savedTheme === 'dark');
-    }
   }, []);
   
   // Save watchlist to localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem('moviedux-watchlist', JSON.stringify(watchlist));
   }, [watchlist]);
-  
-  // Save theme preference
-  useEffect(() => {
-    localStorage.setItem('moviedux-theme', darkMode ? 'dark' : 'light');
-    document.body.className = darkMode ? 'dark-theme' : 'light-theme';
-  }, [darkMode]);
   
   useEffect(() => {
     fetch("movies.json")
@@ -48,14 +36,10 @@ function App() {
   const toggleWatchlist = (movieId) => {
     setWatchlist(prev => prev.includes(movieId) ? prev.filter(id => id !== movieId) : [...prev, movieId]);
   };
-  
-  const toggleTheme = () => {
-    setDarkMode(prev => !prev);
-  };
   return (
     <div className="App">
       <div className = "container">
-        <Header toggleTheme={toggleTheme} darkMode={darkMode} />
+        <Header />
         <Router>
           <nav>
            <ul>
